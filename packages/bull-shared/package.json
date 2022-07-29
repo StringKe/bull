@@ -1,5 +1,5 @@
 {
-  "name": "@nestjs/bull-shared",
+  "name": "@stringke/bull-shared",
   "version": "0.1.0",
   "description": "Nest - modern, fast, powerful node.js web framework (@bull-shared)",
   "homepage": "https://github.com/nestjs/bull",

@@ -48,6 +48,35 @@ export class BullExplorer implements OnModuleInit {
     this.registerQueueEventListeners();
   }
 
+  getProviders() {
+    return this.discoveryService.getProviders();
+  }
+
+  registerCustomWorker<T extends WorkerHost>(
+    instance: T,
+    queueName: string,
+    workOptions: WorkerOptions,
+    moduleRef: Module,
+    wrapper: InstanceWrapper,
+  ) {
+    const isRequestScoped = !wrapper.isDependencyTreeStatic();
+    const queueToken = getQueueToken(queueName);
+    const queueOpts = this.getQueueOptions(queueToken, queueName, undefined);
+
+    if (!(instance instanceof WorkerHost)) {
+      throw new InvalidProcessorClassError((instance as any).constructor?.name);
+    } else {
+      return this.handleProcessor(
+        instance,
+        queueName,
+        queueOpts,
+        moduleRef,
+        isRequestScoped,
+        workOptions,
+      );
+    }
+  }
+
   registerWorkers() {
     const processors: InstanceWrapper[] = this.discoveryService
       .getProviders()

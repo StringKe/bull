@@ -309,6 +309,7 @@ export class BullModule {
       module: BullModule,
       imports: [DiscoveryModule],
       providers: [BullExplorer, BullMetadataAccessor],
+      exports: [BullExplorer, BullMetadataAccessor],
     };
   }
 

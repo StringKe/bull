@@ -5,3 +5,4 @@ export * from './decorators';
 export * from './hosts';
 export * from './interfaces';
 export * from './utils';
+export * from './bull.explorer';

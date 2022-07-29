@@ -2,7 +2,7 @@ import {
   createConditionalDepHolder,
   getQueueToken,
   IConditionalDepHolder,
-} from '@nestjs/bull-shared';
+} from '@stringke/bull-shared';
 import { flatten, OnApplicationShutdown, Provider, Type } from '@nestjs/common';
 import { Queue, QueueScheduler, Worker } from 'bullmq';
 import { BullQueueProcessor } from './bull.types';

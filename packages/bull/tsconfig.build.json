@@ -4,7 +4,7 @@
     "outDir": "./dist",
     "rootDir": "./lib",
     "paths": {
-      "@nestjs/bull-shared": ["../bull-shared/lib"]
+      "@stringke/bull-shared": ["../bull-shared/lib"]
     }
   },
   "references": [

@@ -1,4 +1,4 @@
-import { getQueueToken, NO_QUEUE_FOUND } from '@nestjs/bull-shared';
+import { getQueueToken, NO_QUEUE_FOUND } from '@stringke/bull-shared';
 import { Injectable, Logger, OnModuleInit, Type } from '@nestjs/common';
 import {
   createContextId,
